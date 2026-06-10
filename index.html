@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ダイヤ管理ツール</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>ダイヤ管理ツール</h1>
+
+    <input type="file" id="jsonFile">
+    
+    <button id="clearDataButton">
+    保存データ削除
+</button>
+<label>
+    <input
+        type="radio"
+        name="trainStatus"
+        value="normal"
+    >
+    通常に戻す
+</label>
+    <p id="status">
+        JSONを選択してください
+    </p>
+
+    <div id="stationList"></div>
+
+    <div id="stationView"></div>
+
+    
+    <div id="statusModal" class="modal">
+
+    <div class="modalContent">
+
+        <h3 id="modalTitle">
+            列車設定
+        </h3>
+
+        <label>
+            <input
+                type="radio"
+                name="trainStatus"
+                value="done"
+            >
+            発車済み
+        </label>
+
+        <br>
+
+
+        <br>
+
+        <label>
+            <input
+                type="radio"
+                name="trainStatus"
+                value="delay"
+            >
+            遅延中
+        </label>
+
+        <br>
+
+        <label>
+            <input
+                type="radio"
+                name="trainStatus"
+                value="cancel"
+            >
+            運休
+        </label>
+
+        <br><br>
+
+        <button id="applyStatus">
+            設定
+        </button>
+
+        <button id="closeModal">
+            取消
+        </button>
+
+    </div>
+
+</div>
+<div id="trainInfoModal" class="modal">
+
+    <div class="modalContent">
+
+        <h3 id="trainInfoTitle">
+            列車情報
+        </h3>
+
+        <div id="trainInfoBody"></div>
+
+        <br>
+
+        <button id="closeTrainInfo">
+            閉じる
+        </button>
+
+    </div>
+
+</div>
+<script src="app.js"></script>
+</body>
+</html>

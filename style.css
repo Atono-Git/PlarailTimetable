@@ -1,0 +1,276 @@
+body {
+    background: linear-gradient(
+        135deg,
+        #0e2244,
+        #0c2463,
+        #1565c0
+    );
+
+    min-height: 100vh;
+
+    color: white;
+
+    font-family: sans-serif;
+}
+
+h1 {
+    color: #4fc3f7;
+}
+
+button {
+    display: block;
+    width: 250px;
+
+    background-color: #202c3a;
+    color: white;
+
+    font-size: 24px;
+    padding: 15px 25px;
+    margin: 8px;
+
+    border: none;
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0d47a1;
+}
+.hourBlock {
+    margin-bottom: 20px;
+}
+
+.minuteContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.trainButton {
+    width: 70px;
+    height: 70px;
+
+    border: none;
+    border-radius: 12px;
+
+    font-size: 28px;
+    font-weight: bold;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+.trainButton.done {
+    opacity: 0.25;
+}
+#clearDataButton {
+
+    margin-left: 10px;
+
+    padding: 10px 20px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: #c62828;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+}
+.directionContainer {
+    display: flex;
+    gap: 20px;
+}
+
+.directionColumn {
+    flex: 1;
+
+    background: rgba(255,255,255,0.05);
+
+    border-radius: 12px;
+
+    padding: 15px;
+}
+.activeDirection {
+
+    background: #1976d2;
+
+    color: white;
+
+    font-weight: bold;
+
+    border: 2px solid #0d47a1;
+
+}
+.modal {
+
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        rgba(0,0,0,0.5);
+
+    z-index: 9999;
+
+}
+
+.modalContent {
+
+    background: white;
+
+    width: 300px;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+}
+.modalContent {
+
+    color: black;
+
+}
+.done {
+
+    background: gray !important;
+
+}
+
+
+.delay {
+
+   .delay .statusText {
+
+    color: yellow;
+
+    animation:
+        blink 1s infinite;
+
+}
+
+}
+
+.cancel {
+
+    .cancel .statusText {
+
+    color: red;
+
+    font-weight: bold;
+
+}
+
+}
+.statusText {
+
+    height: 16px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    color: red;
+
+    text-align: center;
+
+}
+
+.minuteText {
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    color: white;
+
+    line-height: 1;
+
+}
+.trainButton {
+
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 12px;
+
+    color: white;
+
+}
+@keyframes blink {
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+.delay .statusText {
+
+    color: rgb(255, 0, 234);
+
+    animation: blink 1s infinite;
+
+}
+.cancel .statusText {
+
+    color: rgb(255, 0, 234)
+;
+
+    font-weight: bold;
+
+}
+
+.cancel .minuteText {
+
+    opacity: 0.3;
+
+}
+.modalContent {
+
+    max-height: 80vh;
+
+    overflow-y: auto;
+
+}
