@@ -399,47 +399,7 @@ if (
 
             let pressTimer;
 
-button.addEventListener(
-    "mousedown",
-    function() {
 
-        pressTimer =
-            setTimeout(
-                function() {
-
-                    showTrainInfo(
-                        button.dataset.train,
-                        button.dataset.station
-                    );
-
-                },
-                1000
-            );
-
-    }
-);
-
-button.addEventListener(
-    "mouseup",
-    function() {
-
-        clearTimeout(
-            pressTimer
-        );
-
-    }
-);
-
-button.addEventListener(
-    "mouseleave",
-    function() {
-
-        clearTimeout(
-            pressTimer
-        );
-
-    }
-);
 
 button.addEventListener(
     "click",
