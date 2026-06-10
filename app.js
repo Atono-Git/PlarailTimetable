@@ -445,20 +445,20 @@ button.addEventListener(
     "click",
     function() {
 
-        
-
         selectedButton =
             button;
 
         document
             .getElementById(
-                "statusModal"
+                "actionModal"
             )
             .style.display =
             "block";
 
     }
 );
+
+
 
         });
 
@@ -511,6 +511,94 @@ document
 
         }
     );
+
+    document
+    .getElementById(
+        "closeTrainInfo"
+    )
+    .addEventListener(
+        "click",
+        function() {
+
+            document
+                .getElementById(
+                    "trainInfoModal"
+                )
+                .style.display =
+                "none";
+
+        }
+    );
+
+
+// ↓↓↓ここから追加↓↓↓
+
+document
+    .getElementById(
+        "closeAction"
+    )
+    .addEventListener(
+        "click",
+        function() {
+
+            document
+                .getElementById(
+                    "actionModal"
+                )
+                .style.display =
+                "none";
+
+        }
+    );
+
+document
+    .getElementById(
+        "openStatus"
+    )
+    .addEventListener(
+        "click",
+        function() {
+
+            document
+                .getElementById(
+                    "actionModal"
+                )
+                .style.display =
+                "none";
+
+            document
+                .getElementById(
+                    "statusModal"
+                )
+                .style.display =
+                "block";
+
+        }
+    );
+
+document
+    .getElementById(
+        "openTrainInfo"
+    )
+    .addEventListener(
+        "click",
+        function() {
+
+            document
+                .getElementById(
+                    "actionModal"
+                )
+                .style.display =
+                "none";
+
+            showTrainInfo(
+                selectedButton.dataset.train,
+                selectedButton.dataset.station
+            );
+
+        }
+    );
+
 document
     .getElementById(
         "applyStatus"
